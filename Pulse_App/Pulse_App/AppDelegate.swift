@@ -9,19 +9,27 @@ import Foundation
 import UIKit
 import IQKeyboardManagerSwift
 import Toast_Swift
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
-     let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-    let windows:UIWindow = UIWindow(frame: UIScreen.main.bounds)
-    var returnVal:Bool = false
+
+
+   
+
+  func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    ) -> Bool
+  {
+          
+        ApplicationDelegate.shared.application(
+            application,
+            didFinishLaunchingWithOptions: launchOptions
+        )
     
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
-    {
-        // Override point for customization after application launch.
-       
         IQKeyboardManager.shared.enable = true
         
         ToastManager.shared.duration = 2.0
@@ -34,47 +42,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         tStyle.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         tStyle.messageNumberOfLines = 2
         ToastManager.shared.style = tStyle
-        
-        if UserDefaults.standard.value(forKey: "email") != nil && UserDefaults.standard.value(forKey: "password") != nil && UserDefaults.standard.value(forKey: "studentid") != nil
-        {
-           DataManager.shared.getData(serviceURL: loginURL, params: ["email" : "\(UserDefaults.standard.value(forKey: "email")as! String)","password":"\(UserDefaults.standard.value(forKey: "password")as! String)","type":loginTypeValue])
-            
-                DataManager.shared.getData(serviceURL: attSummURL, params: ["stdid":"\(UserDefaults.standard.value(forKey: "studentid")as! String)","type":attSummTypeValue])
-            
-            
-            let login:UIViewController = self.mainStoryboard.instantiateViewController(withIdentifier: "LoginVC")as! UIViewController
-            
-            
-            
-            self.windows.rootViewController = login
-            self.windows.makeKeyAndVisible()
-            
-            
-            
-            
-            
-                   
-        }
-      
-
-        
-     return true
+        return true
     }
+          
+    func application(
+        _ app: UIApplication,
+        open url: URL,
+        options: [UIApplication.OpenURLOptionsKey : Any] = [:]
+    ) -> Bool
+    {
 
-    // MARK: UISceneSession Lifecycle
+        ApplicationDelegate.shared.application(
+            app,
+            open: url,
+            sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+            annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+        )
 
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
-
-
+    
 }
 

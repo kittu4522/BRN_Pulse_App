@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -36,11 +36,10 @@
 		215BAFBD247FC41D00F0E87C /* TaskStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215BAF9F247FC41C00F0E87C /* TaskStatusViewController.swift */; };
 		215BAFBE247FC41D00F0E87C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215BAFA0247FC41C00F0E87C /* SceneDelegate.swift */; };
 		215BAFBF247FC41D00F0E87C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215BAFA2247FC41C00F0E87C /* AppDelegate.swift */; };
-		D5D8AC5E6D78ABE16B441E1E /* Pods_Pulse_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60C66E2FFC78A732D7B02A0 /* Pods_Pulse_App.framework */; };
+		3FF137B8D26CB22C7A54B2E9 /* Pods_Pulse_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36332ABC35831F1100AD728B /* Pods_Pulse_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04F4476981F37F3037C343F8 /* Pods-Pulse_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pulse_App.debug.xcconfig"; path = "Target Support Files/Pods-Pulse_App/Pods-Pulse_App.debug.xcconfig"; sourceTree = "<group>"; };
 		215BAF64247FC3FC00F0E87C /* Pulse_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pulse_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		215BAF75247FC3FD00F0E87C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		215BAF7C247FC41B00F0E87C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,8 +71,11 @@
 		215BAF9F247FC41C00F0E87C /* TaskStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskStatusViewController.swift; sourceTree = "<group>"; };
 		215BAFA0247FC41C00F0E87C /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		215BAFA2247FC41C00F0E87C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		563421A27E84223CA87C5692 /* Pods-Pulse_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pulse_App.release.xcconfig"; path = "Target Support Files/Pods-Pulse_App/Pods-Pulse_App.release.xcconfig"; sourceTree = "<group>"; };
-		C60C66E2FFC78A732D7B02A0 /* Pods_Pulse_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pulse_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		217D22DD247FD7C700B5E0DA /* Pulse_App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pulse_App-Bridging-Header.h"; sourceTree = "<group>"; };
+		217D22DE247FDCBD00B5E0DA /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = file; path = Base.lproj; sourceTree = "<group>"; };
+		36332ABC35831F1100AD728B /* Pods_Pulse_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pulse_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72DA49978EB4D5B9207D54D7 /* Pods-Pulse_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pulse_App.release.xcconfig"; path = "Target Support Files/Pods-Pulse_App/Pods-Pulse_App.release.xcconfig"; sourceTree = "<group>"; };
+		C3C034481FD5665683B159DF /* Pods-Pulse_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pulse_App.debug.xcconfig"; path = "Target Support Files/Pods-Pulse_App/Pods-Pulse_App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D8AC5E6D78ABE16B441E1E /* Pods_Pulse_App.framework in Frameworks */,
+				3FF137B8D26CB22C7A54B2E9 /* Pods_Pulse_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +96,7 @@
 				215BAF66247FC3FC00F0E87C /* Pulse_App */,
 				215BAF65247FC3FC00F0E87C /* Products */,
 				D7E1C761FCC368A150AE4435 /* Pods */,
-				D86C97100B87E46768DEFFD2 /* Frameworks */,
+				7433E855C7438BF7F33B5A5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,14 +112,15 @@
 			isa = PBXGroup;
 			children = (
 				215BAF7E247FC41B00F0E87C /* Api Calls */,
-				215BAF7C247FC41B00F0E87C /* Assets.xcassets */,
 				215BAF7D247FC41B00F0E87C /* Base.lproj */,
 				215BAF80247FC41C00F0E87C /* Constants */,
 				215BAF8A247FC41C00F0E87C /* Controller */,
 				215BAF85247FC41C00F0E87C /* View */,
 				215BAF82247FC41C00F0E87C /* Model */,
+				215BAF7C247FC41B00F0E87C /* Assets.xcassets */,
 				215BAFA2247FC41C00F0E87C /* AppDelegate.swift */,
 				215BAFA0247FC41C00F0E87C /* SceneDelegate.swift */,
+				217D22DD247FD7C700B5E0DA /* Pulse_App-Bridging-Header.h */,
 				215BAF75247FC3FD00F0E87C /* Info.plist */,
 			);
 			path = Pulse_App;
@@ -126,6 +129,7 @@
 		215BAF7D247FC41B00F0E87C /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
+				217D22DE247FDCBD00B5E0DA /* Base.lproj */,
 			);
 			name = Base.lproj;
 			path = ../../../Pulse_App/Pulse_App/Base.lproj;
@@ -200,22 +204,21 @@
 			path = TableViewCells;
 			sourceTree = "<group>";
 		};
+		7433E855C7438BF7F33B5A5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36332ABC35831F1100AD728B /* Pods_Pulse_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D7E1C761FCC368A150AE4435 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				04F4476981F37F3037C343F8 /* Pods-Pulse_App.debug.xcconfig */,
-				563421A27E84223CA87C5692 /* Pods-Pulse_App.release.xcconfig */,
+				C3C034481FD5665683B159DF /* Pods-Pulse_App.debug.xcconfig */,
+				72DA49978EB4D5B9207D54D7 /* Pods-Pulse_App.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		D86C97100B87E46768DEFFD2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C60C66E2FFC78A732D7B02A0 /* Pods_Pulse_App.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,11 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 215BAF78247FC3FD00F0E87C /* Build configuration list for PBXNativeTarget "Pulse_App" */;
 			buildPhases = (
-				E3C0300C8EF5129531E5C19F /* [CP] Check Pods Manifest.lock */,
+				5705FEB52F5D7EC6FD0FB81E /* [CP] Check Pods Manifest.lock */,
 				215BAF60247FC3FC00F0E87C /* Sources */,
 				215BAF61247FC3FC00F0E87C /* Frameworks */,
 				215BAF62247FC3FC00F0E87C /* Resources */,
-				5BA497E5CD58F0F0D3012E49 /* [CP] Embed Pods Frameworks */,
+				23F3ABD4B833ECB4A981CD50 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -292,7 +295,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5BA497E5CD58F0F0D3012E49 /* [CP] Embed Pods Frameworks */ = {
+		23F3ABD4B833ECB4A981CD50 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -309,7 +312,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pulse_App/Pods-Pulse_App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E3C0300C8EF5129531E5C19F /* [CP] Check Pods Manifest.lock */ = {
+		5705FEB52F5D7EC6FD0FB81E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -501,7 +504,7 @@
 		};
 		215BAF79247FC3FD00F0E87C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04F4476981F37F3037C343F8 /* Pods-Pulse_App.debug.xcconfig */;
+			baseConfigurationReference = C3C034481FD5665683B159DF /* Pods-Pulse_App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -523,7 +526,7 @@
 		};
 		215BAF7A247FC3FD00F0E87C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 563421A27E84223CA87C5692 /* Pods-Pulse_App.release.xcconfig */;
+			baseConfigurationReference = 72DA49978EB4D5B9207D54D7 /* Pods-Pulse_App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
