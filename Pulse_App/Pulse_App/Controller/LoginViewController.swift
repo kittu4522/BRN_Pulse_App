@@ -74,10 +74,6 @@ class LoginViewController: UIViewController,UITextFieldDelegate
                         tabbar?.modalPresentationStyle = .fullScreen
                         self.present(tabbar!, animated: true, completion: nil)
                     }
-                    
-                    
-                    
-                    
                 }
                 else
                 {

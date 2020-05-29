@@ -30,7 +30,7 @@ class DataManager: NSObject
     var recievedData:NSArray!
     
     
-    
+    var faceBookData:[String:String] = [:]
     
 
     override init()

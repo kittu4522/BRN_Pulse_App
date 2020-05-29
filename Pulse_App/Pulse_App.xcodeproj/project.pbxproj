@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2106419C2480A700006A83DA /* ImageViewCustomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2106419B2480A700006A83DA /* ImageViewCustomClass.swift */; };
 		215BAFA3247FC41D00F0E87C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 215BAF7C247FC41B00F0E87C /* Assets.xcassets */; };
 		215BAFA4247FC41D00F0E87C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215BAF7F247FC41B00F0E87C /* DataManager.swift */; };
 		215BAFA5247FC41D00F0E87C /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215BAF81247FC41C00F0E87C /* constants.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2106419B2480A700006A83DA /* ImageViewCustomClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCustomClass.swift; sourceTree = "<group>"; };
 		215BAF64247FC3FC00F0E87C /* Pulse_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pulse_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		215BAF75247FC3FD00F0E87C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		215BAF7C247FC41B00F0E87C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				215BAF9D247FC41C00F0E87C /* AttendanceDetailsViewController.swift */,
 				215BAF9E247FC41C00F0E87C /* SideBarViewController.swift */,
 				215BAF9F247FC41C00F0E87C /* TaskStatusViewController.swift */,
+				2106419B2480A700006A83DA /* ImageViewCustomClass.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				215BAFBC247FC41D00F0E87C /* SideBarViewController.swift in Sources */,
 				215BAFA4247FC41D00F0E87C /* DataManager.swift in Sources */,
 				215BAFAC247FC41D00F0E87C /* DailyStatusViewController.swift in Sources */,
+				2106419C2480A700006A83DA /* ImageViewCustomClass.swift in Sources */,
 				215BAFA5247FC41D00F0E87C /* constants.swift in Sources */,
 				215BAFBD247FC41D00F0E87C /* TaskStatusViewController.swift in Sources */,
 			);

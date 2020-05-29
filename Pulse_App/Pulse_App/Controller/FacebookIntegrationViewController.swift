@@ -16,6 +16,7 @@ class FacebookIntegrationViewController: UIViewController,LoginButtonDelegate
 
     @IBOutlet weak var nameLbl: UILabel!
  
+   
     @IBOutlet weak var loginBtn: FBLoginButton!
     
     @IBOutlet weak var profilePic: UIImageView!
@@ -56,7 +57,7 @@ class FacebookIntegrationViewController: UIViewController,LoginButtonDelegate
     
     func checkLoggedInStatus()
     {
-        let graph = GraphRequest.init(graphPath: "me", parameters: ["fields":"first_name,last_name,email,mobile, picture.type(medium)"], tokenString: nil, version: nil, httpMethod: HTTPMethod(rawValue: "GET"))
+        let graph = GraphRequest(graphPath: "me", parameters: ["fields":"first_name,last_name,email, picture.type(large)"], httpMethod: HTTPMethod(rawValue: "GET"))
         graph.start { (connection, responce, err) in
             if err == nil
             {
@@ -65,10 +66,18 @@ class FacebookIntegrationViewController: UIViewController,LoginButtonDelegate
                 
                 let imagePath:String = (((self.userData["picture"] as? [String: Any])?["data"] as? [String: Any])?["url"] as? String)!
                 self.profilePic.addImage(url: imagePath)
+                self.isLoggedIn = true
+                
+                dataShared.faceBookData["fName"] = self.userData["first_name"]as! String
+                dataShared.faceBookData["lName"] = self.userData["last_name"]as! String
+                dataShared.faceBookData["email"] = self.userData["email"]as! String
+                dataShared.faceBookData["imageURL"] = imagePath
+                
             }
             else
             {
                 print(err?.localizedDescription)
+                self.isLoggedIn = false
             }
         }
     }
@@ -81,7 +90,7 @@ class FacebookIntegrationViewController: UIViewController,LoginButtonDelegate
         }
         else
         {
-            self.view.makeToast("Sucessfully Logged in ")
+            
         }
     }
     

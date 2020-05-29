@@ -61,7 +61,7 @@ class RegistrationViewController: UIViewController,UITextFieldDelegate,UIImagePi
         qualificationPicker.dataSource = self
         qualificationTF.inputView = qualificationPicker
         
-        profilePicImgView.imageCircle()
+        
     }
     
     @IBAction func imagePickerBtnTap(_ sender: Any)
