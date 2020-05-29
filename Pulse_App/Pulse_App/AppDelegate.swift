@@ -11,13 +11,13 @@ import IQKeyboardManagerSwift
 import Toast_Swift
 import FBSDKCoreKit
 import FBSDKLoginKit
+import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate
 {
-
-
-   
+    
+    
 
   func application(
         _ application: UIApplication,
@@ -29,6 +29,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate
             application,
             didFinishLaunchingWithOptions: launchOptions
         )
+    
+    
+        GIDSignIn.sharedInstance().clientID = "219427313704-gflf8uo09ibopklnfr0auj7i45bcfrg7.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().delegate = self
+
     
         IQKeyboardManager.shared.enable = true
         
@@ -51,15 +56,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         options: [UIApplication.OpenURLOptionsKey : Any] = [:]
     ) -> Bool
     {
-
         ApplicationDelegate.shared.application(
             app,
             open: url,
             sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
             annotation: options[UIApplication.OpenURLOptionsKey.annotation]
         )
-
+        return GIDSignIn.sharedInstance().handle(url)
     }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!)
+    {
+        
+    }
+    
     
 }
 

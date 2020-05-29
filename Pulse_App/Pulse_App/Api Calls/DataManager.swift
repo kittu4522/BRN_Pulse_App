@@ -31,6 +31,7 @@ class DataManager: NSObject
     
     
     var faceBookData:[String:String] = [:]
+    var gmailData:[String:String] = [:]
     
 
     override init()
@@ -64,7 +65,7 @@ class DataManager: NSObject
                         do
                         {
                             
-                            self.recievedData = try JSONSerialization.jsonObject(with: recData!, options: JSONSerialization.ReadingOptions.allowFragments)as! NSArray
+                            self.recievedData = try (JSONSerialization.jsonObject(with: recData!, options: JSONSerialization.ReadingOptions.allowFragments)as! NSArray)
                             
                             switch serviceURL
                             {

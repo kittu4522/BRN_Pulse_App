@@ -37,6 +37,8 @@
 		215BAFBD247FC41D00F0E87C /* TaskStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215BAF9F247FC41C00F0E87C /* TaskStatusViewController.swift */; };
 		215BAFBE247FC41D00F0E87C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215BAFA0247FC41C00F0E87C /* SceneDelegate.swift */; };
 		215BAFBF247FC41D00F0E87C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215BAFA2247FC41C00F0E87C /* AppDelegate.swift */; };
+		21849EF124810073004C369D /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21849EF024810073004C369D /* credentials.plist */; };
+		21849EF32481019C004C369D /* GmailIntegrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21849EF22481019C004C369D /* GmailIntegrationViewController.swift */; };
 		3FF137B8D26CB22C7A54B2E9 /* Pods_Pulse_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36332ABC35831F1100AD728B /* Pods_Pulse_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,8 @@
 		215BAFA2247FC41C00F0E87C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		217D22DD247FD7C700B5E0DA /* Pulse_App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pulse_App-Bridging-Header.h"; sourceTree = "<group>"; };
 		217D22DE247FDCBD00B5E0DA /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = file; path = Base.lproj; sourceTree = "<group>"; };
+		21849EF024810073004C369D /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
+		21849EF22481019C004C369D /* GmailIntegrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailIntegrationViewController.swift; sourceTree = "<group>"; };
 		36332ABC35831F1100AD728B /* Pods_Pulse_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pulse_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72DA49978EB4D5B9207D54D7 /* Pods-Pulse_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pulse_App.release.xcconfig"; path = "Target Support Files/Pods-Pulse_App/Pods-Pulse_App.release.xcconfig"; sourceTree = "<group>"; };
 		C3C034481FD5665683B159DF /* Pods-Pulse_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pulse_App.debug.xcconfig"; path = "Target Support Files/Pods-Pulse_App/Pods-Pulse_App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 				215BAFA0247FC41C00F0E87C /* SceneDelegate.swift */,
 				217D22DD247FD7C700B5E0DA /* Pulse_App-Bridging-Header.h */,
 				215BAF75247FC3FD00F0E87C /* Info.plist */,
+				21849EF024810073004C369D /* credentials.plist */,
 			);
 			path = Pulse_App;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				215BAF9E247FC41C00F0E87C /* SideBarViewController.swift */,
 				215BAF9F247FC41C00F0E87C /* TaskStatusViewController.swift */,
 				2106419B2480A700006A83DA /* ImageViewCustomClass.swift */,
+				21849EF22481019C004C369D /* GmailIntegrationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -236,6 +242,7 @@
 				215BAF61247FC3FC00F0E87C /* Frameworks */,
 				215BAF62247FC3FC00F0E87C /* Resources */,
 				23F3ABD4B833ECB4A981CD50 /* [CP] Embed Pods Frameworks */,
+				58DA80DFBF858B563AFDD518 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -286,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				215BAFA9247FC41D00F0E87C /* Main.storyboard in Resources */,
+				21849EF124810073004C369D /* credentials.plist in Resources */,
 				215BAFB1247FC41D00F0E87C /* SideMenuCellTableViewCell.xib in Resources */,
 				215BAFA3247FC41D00F0E87C /* Assets.xcassets in Resources */,
 				215BAFB4247FC41D00F0E87C /* PersonalDetailsTableViewCell.xib in Resources */,
@@ -337,6 +345,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		58DA80DFBF858B563AFDD518 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pulse_App/Pods-Pulse_App-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pulse_App/Pods-Pulse_App-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pulse_App/Pods-Pulse_App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -364,6 +389,7 @@
 				215BAFBC247FC41D00F0E87C /* SideBarViewController.swift in Sources */,
 				215BAFA4247FC41D00F0E87C /* DataManager.swift in Sources */,
 				215BAFAC247FC41D00F0E87C /* DailyStatusViewController.swift in Sources */,
+				21849EF32481019C004C369D /* GmailIntegrationViewController.swift in Sources */,
 				2106419C2480A700006A83DA /* ImageViewCustomClass.swift in Sources */,
 				215BAFA5247FC41D00F0E87C /* constants.swift in Sources */,
 				215BAFBD247FC41D00F0E87C /* TaskStatusViewController.swift in Sources */,

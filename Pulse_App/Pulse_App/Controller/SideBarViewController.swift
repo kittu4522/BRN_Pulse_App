@@ -101,8 +101,8 @@ class SideBarViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        var changedVC:UIViewController!
-        var tabbar = self.storyboard!.instantiateViewController(withIdentifier: "TabBar") as! TabBarDataViewController
+        let tabbar = self.storyboard!.instantiateViewController(withIdentifier: "TabBar") as! TabBarDataViewController
+        tabbar.modalPresentationStyle = .overFullScreen
         if indexPath.row == 0
         {
             tabbar.selectedIndex = 0

@@ -68,9 +68,9 @@ class FacebookIntegrationViewController: UIViewController,LoginButtonDelegate
                 self.profilePic.addImage(url: imagePath)
                 self.isLoggedIn = true
                 
-                dataShared.faceBookData["fName"] = self.userData["first_name"]as! String
-                dataShared.faceBookData["lName"] = self.userData["last_name"]as! String
-                dataShared.faceBookData["email"] = self.userData["email"]as! String
+                dataShared.faceBookData["fName"] = (self.userData["first_name"]as! String)
+                dataShared.faceBookData["lName"] = (self.userData["last_name"]as! String)
+                dataShared.faceBookData["email"] = (self.userData["email"]as! String)
                 dataShared.faceBookData["imageURL"] = imagePath
                 
                 print(responce as! NSDictionary)
@@ -78,7 +78,7 @@ class FacebookIntegrationViewController: UIViewController,LoginButtonDelegate
             }
             else
             {
-                print(err?.localizedDescription)
+                print(err!.localizedDescription)
                 self.isLoggedIn = false
             }
         }

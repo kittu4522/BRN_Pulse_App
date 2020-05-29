@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="adg-Bv-mYp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c5t-CF-zpa">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -128,6 +128,9 @@
                                                                             <constraint firstAttribute="width" constant="50" id="yH6-DH-Ua7"/>
                                                                         </constraints>
                                                                         <state key="normal" image="mail"/>
+                                                                        <connections>
+                                                                            <segue destination="c5t-CF-zpa" kind="show" id="fXe-ah-JbG"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5k-Qz-Shh">
                                                                         <rect key="frame" x="55" y="0.0" width="50" height="50"/>
@@ -147,7 +150,7 @@
                                                                         </constraints>
                                                                         <state key="normal" image="fb"/>
                                                                         <connections>
-                                                                            <segue destination="zF0-jg-DXw" kind="show" id="alC-vG-utS"/>
+                                                                            <segue destination="zF0-jg-DXw" kind="show" id="xPp-jz-8nu"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -1700,7 +1703,7 @@
                                                             <action selector="registerWithFB:" destination="zF0-jg-DXw" eventType="touchUpInside" id="cyB-UO-RWy"/>
                                                         </connections>
                                                     </button>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="h1R-Qn-luG" customClass="ImageViewCustomClass">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="h1R-Qn-luG" customClass="ImageViewCustomClass" customModule="Pulse_App" customModuleProvider="target">
                                                         <rect key="frame" x="60" y="99" width="200" height="200"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="200" id="FuH-I3-fFx"/>
@@ -1714,7 +1717,7 @@
                                                                 <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
@@ -1782,7 +1785,187 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2SL-GB-sUv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14152.5" y="-1513.7323943661972"/>
+            <point key="canvasLocation" x="13573" y="-1513"/>
+        </scene>
+        <!--Gmail Integration View Controller-->
+        <scene sceneID="4Hb-ay-Mge">
+            <objects>
+                <viewController id="c5t-CF-zpa" customClass="GmailIntegrationViewController" customModule="Pulse_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kBo-Aw-NLK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="580"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0q-Yp-VQq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="580"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7h-Hu-a3l">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="580"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwW-19-v6s">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brnlogo" translatesAutoresizingMaskIntoConstraints="NO" id="sXh-ih-t9c">
+                                                        <rect key="frame" x="80" y="15" width="160" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="160" id="7GM-ke-Y7u"/>
+                                                            <constraint firstAttribute="height" constant="80" id="UMq-dC-hm5"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.042847909029999999" green="0.14005371929999999" blue="0.14519914980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="sXh-ih-t9c" firstAttribute="centerX" secondItem="ZwW-19-v6s" secondAttribute="centerX" id="0If-Sk-6Bh"/>
+                                                    <constraint firstAttribute="height" constant="110" id="Rrh-Md-j7Q"/>
+                                                    <constraint firstAttribute="trailing" secondItem="sXh-ih-t9c" secondAttribute="trailing" constant="80" id="TsI-sg-gFJ"/>
+                                                    <constraint firstAttribute="height" constant="110" id="iKg-hq-RY4"/>
+                                                    <constraint firstItem="sXh-ih-t9c" firstAttribute="top" secondItem="ZwW-19-v6s" secondAttribute="top" constant="15" id="xrS-3u-kT4"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="klA-RH-djM">
+                                                <rect key="frame" x="0.0" y="118" width="320" height="462"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SignUp with Gmail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Yb-pj-mVx">
+                                                        <rect key="frame" x="72" y="15" width="176" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="f4p-v7-TKh"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <size key="shadowOffset" width="1" height="1"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to BRN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9C3-zw-wUD">
+                                                        <rect key="frame" x="81.5" y="326" width="157" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="uit-UF-Xq0"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <size key="shadowOffset" width="1" height="1"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUp-ye-ecZ">
+                                                        <rect key="frame" x="10" y="364" width="300" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Id4-pg-6D0"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <size key="shadowOffset" width="1" height="1"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0X-vw-6R8">
+                                                        <rect key="frame" x="60" y="422" width="200" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="Exi-W0-gsg"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="19"/>
+                                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                                        <state key="normal" title="Register with Gmail" backgroundImage="btn">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="registerWithGmail:" destination="c5t-CF-zpa" eventType="touchUpInside" id="eTz-qY-WFs"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="1zc-bg-XLW" customClass="ImageViewCustomClass" customModule="Pulse_App" customModuleProvider="target">
+                                                        <rect key="frame" x="60" y="99" width="200" height="200"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="c9C-Pv-ab3"/>
+                                                            <constraint firstAttribute="height" constant="200" id="cey-N5-fPP"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="100"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wV7-Kf-DrN" customClass="GIDSignInButton">
+                                                        <rect key="frame" x="110" y="53" width="100" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="CRs-pS-9LW"/>
+                                                            <constraint firstAttribute="height" constant="30" id="PJR-Bj-kRq"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.78425282240000005" green="0.78434795140000002" blue="0.78422063590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="v0X-vw-6R8" secondAttribute="trailing" constant="60" id="7Kh-Ps-wgV"/>
+                                                    <constraint firstItem="5Yb-pj-mVx" firstAttribute="centerX" secondItem="klA-RH-djM" secondAttribute="centerX" id="8xv-RZ-dhi"/>
+                                                    <constraint firstItem="VUp-ye-ecZ" firstAttribute="leading" secondItem="klA-RH-djM" secondAttribute="leading" constant="10" id="I7W-4e-oOj"/>
+                                                    <constraint firstAttribute="trailing" secondItem="VUp-ye-ecZ" secondAttribute="trailing" constant="10" id="Mb6-LR-6h6"/>
+                                                    <constraint firstItem="1zc-bg-XLW" firstAttribute="top" secondItem="5Yb-pj-mVx" secondAttribute="bottom" constant="54" id="WpP-Hu-58X"/>
+                                                    <constraint firstItem="5Yb-pj-mVx" firstAttribute="top" secondItem="klA-RH-djM" secondAttribute="top" constant="15" id="XzQ-gu-uJG"/>
+                                                    <constraint firstItem="VUp-ye-ecZ" firstAttribute="top" secondItem="9C3-zw-wUD" secondAttribute="bottom" constant="8" id="ZcE-ke-uin"/>
+                                                    <constraint firstAttribute="bottom" secondItem="v0X-vw-6R8" secondAttribute="bottom" constant="10" id="cPA-mw-G89"/>
+                                                    <constraint firstItem="9C3-zw-wUD" firstAttribute="centerX" secondItem="klA-RH-djM" secondAttribute="centerX" id="euK-b1-942"/>
+                                                    <constraint firstItem="wV7-Kf-DrN" firstAttribute="top" secondItem="5Yb-pj-mVx" secondAttribute="bottom" constant="8" id="fq2-2a-iNK"/>
+                                                    <constraint firstItem="wV7-Kf-DrN" firstAttribute="centerX" secondItem="klA-RH-djM" secondAttribute="centerX" id="ndh-DN-wK6"/>
+                                                    <constraint firstItem="v0X-vw-6R8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="klA-RH-djM" secondAttribute="leading" constant="60" id="qXd-LC-E7S"/>
+                                                    <constraint firstItem="9C3-zw-wUD" firstAttribute="top" secondItem="1zc-bg-XLW" secondAttribute="bottom" constant="27" id="u2w-RM-Yiu"/>
+                                                    <constraint firstItem="1zc-bg-XLW" firstAttribute="centerX" secondItem="klA-RH-djM" secondAttribute="centerX" id="wYR-xf-KgM"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="klA-RH-djM" firstAttribute="leading" secondItem="E7h-Hu-a3l" secondAttribute="leading" id="3ph-Y9-zay"/>
+                                            <constraint firstItem="ZwW-19-v6s" firstAttribute="leading" secondItem="E7h-Hu-a3l" secondAttribute="leading" id="a46-3D-etF"/>
+                                            <constraint firstItem="klA-RH-djM" firstAttribute="top" secondItem="ZwW-19-v6s" secondAttribute="bottom" constant="8" id="drB-AE-L1n"/>
+                                            <constraint firstAttribute="bottom" secondItem="klA-RH-djM" secondAttribute="bottom" id="gp4-dp-Kog"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZwW-19-v6s" secondAttribute="trailing" id="mQs-yn-hpH"/>
+                                            <constraint firstAttribute="trailing" secondItem="klA-RH-djM" secondAttribute="trailing" id="p1e-OZ-nfT"/>
+                                            <constraint firstItem="ZwW-19-v6s" firstAttribute="top" secondItem="E7h-Hu-a3l" secondAttribute="top" id="xO1-iI-2cH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="E7h-Hu-a3l" firstAttribute="height" secondItem="OEf-6U-3Vn" secondAttribute="height" id="1cc-tq-I6A"/>
+                                    <constraint firstItem="E7h-Hu-a3l" firstAttribute="width" secondItem="OEf-6U-3Vn" secondAttribute="width" id="3D6-kR-V6s"/>
+                                    <constraint firstItem="E7h-Hu-a3l" firstAttribute="trailing" secondItem="zew-4d-Cx9" secondAttribute="trailing" id="Pf6-dE-qm7"/>
+                                    <constraint firstItem="E7h-Hu-a3l" firstAttribute="bottom" secondItem="zew-4d-Cx9" secondAttribute="bottom" id="XFX-QP-2Vk"/>
+                                    <constraint firstItem="E7h-Hu-a3l" firstAttribute="top" secondItem="zew-4d-Cx9" secondAttribute="top" id="i5V-Vv-VSG"/>
+                                    <constraint firstItem="E7h-Hu-a3l" firstAttribute="leading" secondItem="zew-4d-Cx9" secondAttribute="leading" id="ltf-So-h6B"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="zew-4d-Cx9"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="OEf-6U-3Vn"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="j0q-Yp-VQq" firstAttribute="leading" secondItem="VZr-H4-dvg" secondAttribute="leading" id="WYX-e3-7Sq"/>
+                            <constraint firstItem="j0q-Yp-VQq" firstAttribute="bottom" secondItem="VZr-H4-dvg" secondAttribute="bottom" id="Wxg-3P-g2e"/>
+                            <constraint firstItem="j0q-Yp-VQq" firstAttribute="trailing" secondItem="VZr-H4-dvg" secondAttribute="trailing" id="tlD-D7-chp"/>
+                            <constraint firstItem="j0q-Yp-VQq" firstAttribute="top" secondItem="VZr-H4-dvg" secondAttribute="top" id="wCX-Cl-SkV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VZr-H4-dvg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cmf-ed-m6s"/>
+                    <size key="freeformSize" width="320" height="600"/>
+                    <connections>
+                        <outlet property="profilePic" destination="1zc-bg-XLW" id="u1p-3v-LOh"/>
+                        <outlet property="signInBtn" destination="wV7-Kf-DrN" id="dvm-Wx-MNP"/>
+                        <outlet property="userName" destination="VUp-ye-ecZ" id="b4H-kK-bY3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i76-Gx-Ohz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11559" y="-1514"/>
         </scene>
     </scenes>
     <resources>
