@@ -78,6 +78,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate
                 else
                 {
                     self.view.makeToast("Not Logedin try again")
+                    self.loader.stopAnimating()
 
                 }
             }

@@ -57,7 +57,7 @@ class FacebookIntegrationViewController: UIViewController,LoginButtonDelegate
     
     func checkLoggedInStatus()
     {
-        let graph = GraphRequest(graphPath: "me", parameters: ["fields":"first_name,last_name,email, picture.type(large)"], httpMethod: HTTPMethod(rawValue: "GET"))
+        let graph = GraphRequest(graphPath: "me", parameters: ["fields":"first_name,last_name,email,picture.type(large)"], httpMethod: HTTPMethod(rawValue: "GET"))
         graph.start { (connection, responce, err) in
             if err == nil
             {
@@ -72,6 +72,8 @@ class FacebookIntegrationViewController: UIViewController,LoginButtonDelegate
                 dataShared.faceBookData["lName"] = self.userData["last_name"]as! String
                 dataShared.faceBookData["email"] = self.userData["email"]as! String
                 dataShared.faceBookData["imageURL"] = imagePath
+                
+                print(responce as! NSDictionary)
                 
             }
             else
@@ -90,7 +92,18 @@ class FacebookIntegrationViewController: UIViewController,LoginButtonDelegate
         }
         else
         {
-            
+            let registerWithFB = self.storyboard?.instantiateViewController(withIdentifier: "RegistrationVC")as! RegistrationViewController
+            registerWithFB.modalPresentationStyle = .overFullScreen
+            self.present(registerWithFB, animated: true) {
+                registerWithFB.profilePicImgView.image = self.profilePic.image
+                registerWithFB.firstNameTF.text = dataShared.faceBookData["fName"]
+                registerWithFB.lastNameTF.text = dataShared.faceBookData["lName"]
+                registerWithFB.emailIDTF.text = dataShared.faceBookData["email"]
+                
+                let login = LoginManager()
+                login.logOut()
+                
+            }
         }
     }
     
