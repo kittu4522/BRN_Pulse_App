@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c5t-CF-zpa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="adg-Bv-mYp">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -25,7 +25,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brnlogo" translatesAutoresizingMaskIntoConstraints="NO" id="gmU-tG-qNT">
-                                                        <rect key="frame" x="80" y="15" width="160" height="80"/>
+                                                        <rect key="frame" x="80" y="15" width="160.00000000000006" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="160" id="FL9-ah-vKh"/>
                                                             <constraint firstAttribute="height" constant="80" id="gAU-dt-fC1"/>
@@ -66,7 +66,7 @@
                                                         <rect key="frame" x="80" y="222" width="160" height="100"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOE-kd-zaP">
-                                                                <rect key="frame" x="0.0" y="0.0" width="160" height="45"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="160.00000000000011" height="45"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                                                 <size key="titleShadowOffset" width="1" height="2"/>
@@ -81,7 +81,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlM-EF-hST">
-                                                                <rect key="frame" x="0.0" y="55" width="160" height="45"/>
+                                                                <rect key="frame" x="0.0" y="55" width="160.00000000000011" height="45"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                                                 <size key="titleShadowOffset" width="1" height="2"/>
